@@ -3,6 +3,7 @@
         <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
             <link rel="stylesheet" href="styles.css">
             <title>TechFused</title>
            
@@ -19,7 +20,7 @@
                 <div class="search-container">
                     <button class="menu-toggle">&#9776;</button>
                     <div class="search-bar">
-                        <input type="text" placeholder="Search">
+                        <input type="text" placeholder="Search" id="searchInput" onkeyup="filterProjects()">
                         <button><img src="search1.png" alt="Search Icon"></button>
                     </div>
                 </div>
@@ -138,11 +139,6 @@
                 </div>
             </div>
 
-            <!-- Footer -->
-            <footer>
-                <p>&copy; 2024 TechFused | All Rights Reserved</p>
-            </footer>
-
             <script>
                 function openLoginModal() {
                     document.getElementById("loginModal").style.display = "block";
@@ -159,6 +155,49 @@
                 }
             </script>
             <script src="script.js"></script>
+
+            <!-- Footer -->
+            <!-- <footer>
+                <p>&copy; 2024 TechFused | All Rights Reserved</p>
+            </footer> -->
+
+            <footer>
+                <div class="footer">
+                  <div class="footer-section social-section">
+                    <p>Get Social</p>
+                    <h2>Connect with us</h2>
+                    <div class="footer-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </div>
+                  </div>
+                  <div class="footer-section email-section">
+                    <p>Get the tips you need in your inbox</p>
+                    <h2>Get the tips you need in your inbox</h2>
+                    <div class="email-input">
+                      <input type="email" placeholder="Email address">
+                      <button>→</button>
+                    </div>
+                  </div>
+                  <div class="footer-section write-section">
+                    <p>Have a story idea?</p>
+                    <h2>Write for Us</h2>
+                    <a href="#">→</a>
+                  </div>
+                </div>
+                <div class="bottom-footer">
+                  <p>© Copyright TechFused  2024</p>
+                  <p>
+                    <a href="#">Contact</a> |
+                    <a href="#">Home</a> |
+                    <a href="#">Privacy & Terms</a> |
+                    <a href="#" onclick="openLoginModal()">Login</a>
+                  </p>
+                </div>
+              </footer>
+              
 
         </body>
     </html>

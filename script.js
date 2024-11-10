@@ -72,3 +72,29 @@ function toggleDetailsPage() {
 }
 
 
+function filterProjects() {
+    console.log("Filtering projects...");
+    // Get the value of the search input
+    const searchValue = document.getElementById("searchInput").value.toLowerCase();
+
+    // Get all project cards
+    const projectCards = document.querySelectorAll(".project-card");
+
+    // Loop through each project card and check if it matches the search query
+    projectCards.forEach(card => {
+        // Get the project title text
+        const projectTitle = card.querySelector("h3").textContent.toLowerCase();
+        
+        // Check if the project title includes the search query
+        if (projectTitle.includes(searchValue)) {
+            // Show the project card if it matches
+            card.style.display = "block";
+        } else {
+            // Hide the project card if it doesn't match
+            card.style.display = "none";
+        }
+    });
+}
+
+
+

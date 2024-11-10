@@ -1,13 +1,33 @@
-@media screen and (max-width: 768px) {
-    /* Add styles for mobile here */
-    .header-right {
-        /* Adjust styles for mobile */
-        flex-direction: column;
+/* Mobile view */
+@media (max-width: 767px) {
+    .header, .search-bar, .project-card {
+        /* Adjust font sizes, padding, margins, or width for mobile */
+        font-size: 14px;
+        padding: 10px;
     }
-    .icons img {
-        width: 40px; /* Adjust icon size */
+
+
+    /* Ensure images are responsive */
+    img {
+        width: 100%;
+        height: auto;
     }
 }
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.project-card {
+    flex: 1 1 100%; /* Full width on smaller screens */
+}
+
+/* Tablet view */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Adjust styles specifically for tablets if needed */
+}
+
 
 img {
     max-width: 100%;
@@ -184,10 +204,10 @@ footer {
     width: 100%;
 }
 
-footer p {
+/* footer p {
     color: #333;
     font-size: 14px;
-}
+} */
 
 .content {
     margin-left: 220px;
@@ -388,3 +408,71 @@ footer p {
     border-radius: 50%;
     margin-left: 10px;
 }
+
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #a5d0ec;
+    color: white;
+    padding: 20px 0;
+  }
+  .footer-section {
+    width: 30%;
+    padding: 20px;
+    text-align: center;
+  }
+  .footer-section p {
+    margin: 0;
+    font-weight: bold;
+  }
+  .social-section {
+    background-color: #f4d7c7;
+  }
+  .email-section {
+    background-color: #c5d9c8;
+  }
+  .write-section {
+    background-color: #f1a88c;
+  }
+  .footer-icons a {
+    margin: 0 10px;
+    color: #237bb6;
+    text-decoration: none;
+    font-size: 24px;
+  }
+  .email-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  .email-input input[type="email"] {
+    padding: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .email-input button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-left: -5px;
+    border-radius: 5px;
+  }
+  .bottom-footer {
+    background-color: #2d89df;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .bottom-footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+  
