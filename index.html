@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="styles.css">
+            <title>TechFused</title>
+           
+        </head>
+        <body>
+
+            <!-- Header -->
+            <header>
+                <div class="header-left">
+                    <img src="logo.jpeg" alt="TechFused Logo" class="logo">
+                    <span class="tagline">TechFused</span>
+                </div>
+
+                <div class="search-container">
+                    <button class="menu-toggle">&#9776;</button>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <button><img src="search1.png" alt="Search Icon"></button>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <div class="icons">
+                        <img src="refresh-arrow.png" alt="Refresh Icon">
+                        <img src="heart.png" alt="Favorites Icon">
+                        <img src="profile-user.png" alt="Account Icon" onclick="openLoginModal()">
+                        <img src="cart.png" alt="Cart Icon" id="cartIcon" onclick="toggleDetailsPage()">
+                        <span id="cartCount" class="cart-count">[0]</span>
+                        <span>₹0.00</span>
+                    </div>
+                </div>
+            </header>
+
+            <div class="body-nav">
+                <button class="categories-btn">
+                    <img src="menu-bar.png" alt="Categories Icon">
+                    Categories
+                </button>
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">Projects For Sale</a>
+                    <a href="#">B2B</a>
+                    <a href="#">Blogs</a>
+                    <a href="#">Shop</a>
+                    <a href="#" onclick="openLoginModal()">Login</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="content">
+
+                <!-- Featured Projects Section -->
+
+                <section class="featured-projects">
+                    <h2>Featured Projects</h2>
+                    <a href="#" class="view-all">View all</a>
+                    
+                    <div class="carousel">
+                        <!-- Left Arrow -->
+                        <button class="carousel-btn left" onclick="moveSlide(-1)">&#10094;</button>
+        
+                        <!-- Project List -->
+                        <div class="project-list">
+                            <!-- Project Cards (Add as many as needed) -->
+                            <div class="project-card" onclick="openProjectDetailsModal('Thrumal Printer', 'printer.jpeg', 'Detailed description of the Thrumal Printer.')">
+                                <img src="printer.jpeg" alt="Project Image">
+                                <h3>Thrumal Printer</h3>
+                                <p>By TechFused</p>
+                                <div class="project-info">
+                                    <span>👍 84</span>
+                                    <span>👁️ 84</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <img src="printer.jpeg" alt="Project Image">
+                                <h3>Thrumal Printer</h3>
+                                <p>By TechFused</p>
+                                <div class="project-info">
+                                    <span>👍 8</span>
+                                    <span>👁️ 224</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <img src="printer.jpeg" alt="Project Image">
+                                <h3>Thrumal Printer</h3>
+                                <p>By TechFused</p>
+                                <div class="project-info">
+                                    <span>👍 6</span>
+                                    <span>👁️ 1.0K</span>
+                                </div>
+                            </div>
+                            <div class="project-card">
+                                <img src="printer.jpeg" alt="Project Image">
+                                <h3>Thrumal Printer</h3>
+                                <p>By TechFused</p>
+                                <div class="project-info">
+                                    <span>👍 1</span>
+                                    <span>👁️ 203</span>
+                                </div>
+                            </div>
+        
+        
+                        <!-- Right Arrow -->
+                        <button class="carousel-btn right" onclick="moveSlide(1)">&#10095;</button>
+                    </div>
+                </section>
+            </div>
+            <!-- Project Details Modal -->
+            <div id="projectDetailsModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeProjectDetailsModal()">&times;</span>
+                    <h2 id="projectTitle">Thurmal printer</h2>
+                    <img id="projectImage" src="" alt="Project Image">
+                    <h3>Quantity :</h3>
+                    <div class="quantity-control">
+                        <button onclick="decreaseQuantity()">-</button>
+                        <span id="quantityValue">0</span> <!-- Display the current quantity -->
+                        <button onclick="increaseQuantity()">+</button>
+                    </div>
+                    <p id="projectDescription">This is powerfull printer </p>
+                    <button onclick="addToCart()">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Login Modal -->
+            <div id="loginModal" class="modal">
+                <div class="modal-content">
+                    <h2>Login</h2>
+                    <input type="text" placeholder="Username" id="username">
+                    <input type="password" placeholder="Password" id="password">
+                    <button onclick="login()">Login</button>
+                    <!-- <button onclick="closeLoginModal()">Cancel</button> -->
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer>
+                <p>&copy; 2024 TechFused | All Rights Reserved</p>
+            </footer>
+
+            <script>
+                function openLoginModal() {
+                    document.getElementById("loginModal").style.display = "block";
+                }
+
+                function closeLoginModal() {
+                    document.getElementById("loginModal").style.display = "none";
+                }
+
+                function login() {
+                    // Handle login logic here
+                    alert('Logged in');
+                    closeLoginModal();
+                }
+            </script>
+            <script src="script.js"></script>
+
+        </body>
+    </html>
