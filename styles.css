@@ -50,7 +50,7 @@
 }
 .search-bar {
     width: 100%;
-    max-width: 90px; /* Adjust this for smaller screens */
+    max-width: 400px; /* Adjust this for smaller screens */
 }
 .header-right {
     flex-wrap: wrap;
